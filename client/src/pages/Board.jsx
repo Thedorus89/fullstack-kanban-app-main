@@ -44,11 +44,13 @@ const Board = () => {
   }, [boardId])
 
   const onIconChange = async (newIcon) => {
+    // biome-ignore lint/style/useConst: <explanation>
     let temp = [...boards]
     const index = temp.findIndex(e => e.id === boardId)
     temp[index] = { ...temp[index], icon: newIcon }
 
     if (isFavourite) {
+      // biome-ignore lint/style/useConst: <explanation>
       let tempFavourite = [...favouriteList]
       const favouriteIndex = tempFavourite.findIndex(e => e.id === boardId)
       tempFavourite[favouriteIndex] = { ...tempFavourite[favouriteIndex], icon: newIcon }
@@ -69,11 +71,13 @@ const Board = () => {
     const newTitle = e.target.value
     setTitle(newTitle)
 
+    // biome-ignore lint/style/useConst: <explanation>
     let temp = [...boards]
     const index = temp.findIndex(e => e.id === boardId)
     temp[index] = { ...temp[index], title: newTitle }
 
     if (isFavourite) {
+      // biome-ignore lint/style/useConst: <explanation>
       let tempFavourite = [...favouriteList]
       const favouriteIndex = tempFavourite.findIndex(e => e.id === boardId)
       tempFavourite[favouriteIndex] = { ...tempFavourite[favouriteIndex], title: newTitle }
@@ -168,7 +172,7 @@ const Board = () => {
           <TextField
             value={title}
             onChange={updateTitle}
-            placeholder='Untitled'
+            placeholder='<Project Name>'
             variant='outlined'
             fullWidth
             sx={{

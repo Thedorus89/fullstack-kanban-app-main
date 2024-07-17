@@ -48,6 +48,7 @@ const TaskModal = props => {
     setTimeout(() => {
       if (editorWrapperRef.current) {
         const box = editorWrapperRef.current
+        // biome-ignore lint/style/useTemplate: <explanation>
         box.querySelector('.ck-editor__editable_inline').style.height = (box.offsetHeight - 50) + 'px'
       }
     }, timeout)

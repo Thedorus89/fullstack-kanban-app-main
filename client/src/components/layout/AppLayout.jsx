@@ -12,6 +12,7 @@ const AppLayout = () => {
   const dispatch = useDispatch()
   const [loading, setLoading] = useState(true)
 
+  // biome-ignore lint/correctness/useExhaustiveDependencies: <explanation>
   useEffect(() => {
     const checkAuth = async () => {
       const user = await authUtils.isAuthenticated()

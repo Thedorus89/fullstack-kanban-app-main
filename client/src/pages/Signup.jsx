@@ -55,6 +55,7 @@ const Signup = () => {
       navigate('/')
     } catch (err) {
       const errors = err.data.errors
+      // biome-ignore lint/complexity/noForEach: <explanation>
       errors.forEach(e => {
         if (e.param === 'username') {
           setUsernameErrText(e.msg)

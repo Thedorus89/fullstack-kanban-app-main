@@ -127,7 +127,7 @@ const Kanban = props => {
         justifyContent: 'space-between'
       }}>
         <Button onClick={createSection}>
-          Add section
+          Add section header (Todo, In Progress, Completed)
         </Button>
         <Typography variant='body2' fontWeight='700'>
           {data.length} Sections
